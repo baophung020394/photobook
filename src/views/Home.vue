@@ -1,20 +1,17 @@
 <template>
   <div class="home">
-    <amplify-authenticator>
-      <div>
-        <div>Hello</div>
-      </div>
-      <amplify-sign-out></amplify-sign-out>
-    </amplify-authenticator>
+    <Login />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import Login from '../components/Login';
 
 export default {
   name: 'Home',
   components: {
+    Login
   }
 }
 </script>
