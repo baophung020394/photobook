@@ -32,7 +32,7 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  name: "D",
+  name: "Login",
   data: () => ({
     username: "",
     password: "",
@@ -49,6 +49,7 @@ export default {
           username: this.username,
           password: this.password,
         });
+        this.$router.push("/albums");
       } catch (error) {
         console.log(error);
         this.error = error;

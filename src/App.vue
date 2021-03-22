@@ -1,13 +1,30 @@
 <template>
   <div id="app">
     <div id="nav">
+      <Nav />
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+import { mapActions } from 'vuex';
+import Nav from './components/Nav';
 
+export default {
+  name: "App",
+  mounted() {
+    this.authAction();
+  },
+  components: {
+    Nav
+  },
+  methods: {
+    ...mapActions("auth",["authAction"])
+  },
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

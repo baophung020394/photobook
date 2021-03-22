@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <Login />
+    {{$store.state.auth}}
+    <LoginPage />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Login from '../components/Login';
-
+import LoginPage from '../components/LoginPage';
 export default {
   name: 'Home',
   components: {
-    Login
+    LoginPage,
   }
 }
 </script>
