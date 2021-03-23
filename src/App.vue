@@ -5,25 +5,25 @@
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
-import Nav from './components/Nav';
+import { mapActions } from "vuex";
+import Nav from "./components/Nav";
 
 export default {
   name: "App",
   mounted() {
-    this.authAction();
+    this.authActions();
   },
   components: {
-    Nav
+    Nav,
   },
   methods: {
-    ...mapActions("auth",["authAction"])
+    ...mapActions("auth", ["authActions"]),
   },
-}
+};
 </script>
 <style lang="scss">
 #app {
