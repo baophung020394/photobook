@@ -1,8 +1,8 @@
-import { createAlbum } from '../../graphql/mutations';
+// import { createAlbum } from '../../graphql/mutations';
 import { API, graphqlOperation } from 'aws-amplify';
 import { createAlbum as createAlbumMutation } from '@/graphql/mutations';
-import { getAlbum as getAlbumQuery } from '@graphql/queries';
-import { listAlbums as listAlbumQuery } from '@g4/queries';
+import { getAlbum as getAlbumQuery } from '@/graphql/queries';
+import { listAlbums as listAlbumQuery } from '@/graphql/queries';
 
 export const albumInfo = {
     namespaced: true,
@@ -29,6 +29,6 @@ export const albumInfo = {
         }
     },
     getters: {
-
+        albums: (state) => state.albums
     }
 }
